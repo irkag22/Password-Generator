@@ -1,9 +1,11 @@
 function newPassword() {
-    var passLength= prompt("How many characters would you like your password to contain? Length must be between 8 and 129 characters");
-    var compOptions = ['R', "P", "S"];
+    var passLength= prompt("How many characters would you like your password to contain?");
+    if(passwordLength < 8){
+        alert('Password length must be at least 8 characters');
+      }
 
 var userPassword = {
-length: passwordLength,
+length: passLength,
 hasNumeric: hasNumeric,
 hasLower: hasLower,
 hasUpper: hasUpper,
