@@ -1,3 +1,4 @@
+add gitignore
 
 //user clicks a button
   //event listener, calling a function to write password

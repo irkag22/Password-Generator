@@ -1,8 +1,18 @@
+
+
+
 function newPassword() {
     var passLength= prompt("How many characters would you like your password to contain?");
     if(passwordLength < 8){
         alert('Password length must be at least 8 characters');
+      var hasNumeric=
       }
+
+var hasNumeric = confirm("Click OK to confirm including numeric characters.");
+var hasLower = confirm("Click OK to confirm including Lower characters.");
+var hasUpper = confirm("Click OK to confirm including Upper characters.");
+var hasSpecial = confirm("Click OK to confirm including Special characters.");
+  }
 
 var userPassword = {
 length: passLength,
@@ -11,7 +21,7 @@ hasLower: hasLower,
 hasUpper: hasUpper,
 hasSpecial: hasSpecial,
 }
-  return userPassword;
+return userPassword;
 
 // //     function startGame() {
 //     var userInput = prompt("Please enter R, P or S").toUpperCase();
