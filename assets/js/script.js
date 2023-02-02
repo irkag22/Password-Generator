@@ -1,6 +1,6 @@
-// document.getElementById("#generate")
+var generateBtn = document.querySelector("#generate")
 
-const genPass(len) => {
+function genPass() {
   let len = prompt('How long would you like your password to be (between 8-128 characters)?');
 
   if(len<8 || len>128 || isNaN(len)) {
@@ -28,7 +28,8 @@ const genPass(len) => {
   console.log(tempPass);
 };
 
-document.onclick = genPass;
+generateBtn.addEventListener("click", genPass)
+// document.onclick = genPass;
 
 
 
