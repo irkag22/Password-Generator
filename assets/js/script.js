@@ -1,3 +1,34 @@
+// document.getElementById("#generate")
+
+const genPass(len) => {
+  let len = prompt('How long would you like your password to be (between 8-128 characters)?');
+
+  if(len<8 || len>128 || isNaN(len)) {
+    alert('Incorrect length or input. Please try again.');
+    return genPass();
+  }; 
+
+  let num = confirm('Click OK to confirm if you want the password to contain numbers?');
+  let uppCase = confirm('Click OK to confirm if you want the password to contain upper case letters?');
+  let lowCase = confirm('Click OK to confirm if you want the password to contain lower case letters?');
+  let speChar = confirm('Click OK to confirm if you want the password to contain characters?');
+
+  let tempPass = '';
+  if(speChar) tempPass += '!~#$%^&*()_-+=?|';
+  if(uppCase) tempPass += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  if(lowCase) tempPass += 'abcdefghijklmnopqrstuvwxyz';
+  if(num) tempPass += '1234567890';
+
+  let passwd = '';
+  for(let i=0; i<len; i++) {
+    passwd += tempPass[Math.floor(Math.random()*tempPass.length)];
+  }
+
+  document.querySelector('textarea').innerText = passwd;
+  console.log(tempPass);
+};
+
+document.onclick = genPass;
 
 
 
@@ -38,8 +69,10 @@
 
 
 
-
-
+  // if(len>128) {
+  //   alert('Incorrect length.  Please try again.');
+  //   return genPass();
+  // }
 
 
 // ____________________________________________________________________________________________________________________________________
