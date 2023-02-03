@@ -1,5 +1,6 @@
 # Password-Generator
-An attempt at the password-generator website. Will be re-submitting. 
+Re-submitting this assignment. 
+
 </br>
 
 [GitHub] (https://github.com/irkag22/Password-Generator)
